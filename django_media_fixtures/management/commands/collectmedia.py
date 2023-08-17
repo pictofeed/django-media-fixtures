@@ -177,8 +177,8 @@ class Command(BaseCommand):
             "Type 'yes' to continue, or 'no' to cancel: "
         )
 
-        if self.interactive and input(''.join(message)) != 'yes':
-            raise CommandError("Collecting media files cancelled.")
+        #if self.interactive and input(''.join(message)) != 'yes':
+        #    raise CommandError("Collecting media files cancelled.")
 
         collected = self.collect()
         modified_count = len(collected['modified'])
